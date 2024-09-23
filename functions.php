@@ -26,11 +26,11 @@ add_action("after_setup_theme","threesixty_conf_theme");
 
 
 function threesixty_carga_style(){
-    wp_enqueue_style( 'mi_estilo', get_stylesheet_uri());
+
+
+
+    wp_enqueue_style( 'mi_estilo', get_template_directory_uri() ."/css/main.css");
     }
-
-
-
 
 add_action("wp_enqueue_scripts","threesixty_carga_style");
 
