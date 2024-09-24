@@ -26,7 +26,8 @@ add_action("after_setup_theme","threesixty_conf_theme");
 
 
 function threesixty_carga_style(){
-
+    /*wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.min.css", array(), false, 'all');
+    wp_enqueue_style('bootstrap');*/
 
 
     wp_enqueue_style( 'mi_estilo', get_template_directory_uri() ."/css/main.css");
