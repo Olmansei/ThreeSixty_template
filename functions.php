@@ -24,6 +24,14 @@ add_theme_support( 'html5', array(
 
 add_action("after_setup_theme","threesixty_conf_theme");
 
+//Menus
+register_nav_menus(
+    array(
+        'top-menu'=> 'Top Menu Location',
+        'bottom-menu'=> 'Bottom Menu Location',
+    )
+    );
+
 
 function threesixty_carga_style(){
     /*wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.min.css", array(), false, 'all');

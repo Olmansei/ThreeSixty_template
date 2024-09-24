@@ -327,15 +327,42 @@ height: 40px; /* Adjusts icon size */
 
 .footer-container {
 display: flex;
-justify-content: space-between;
-align-items: center;
+justify-content: end;
+align-items: end;
 flex-wrap: wrap; /* Allow wrapping for mobile */
 height: auto; /* Height will adjust based on content */
-padding: 15px 20px; /* Adjust padding */
 background-color: #333; /* Example background color */
 color: white;
 box-sizing: border-box;
+padding: 24px 40px 24px 40px;
+gap: 24px;
 }
+
+.footer-container li {
+list-style: none;
+list-style-type: none;
+  text-decoration: none;
+color: white;
+font-family: "Space Grotesk", sans-serif;
+font-size: 14px;
+gap: 24px;
+}
+
+.footer-container li a {
+  list-style: none;
+  list-style-type: none;
+    text-decoration: none;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  gap: 24px;
+  }
+
+  .footer-container li a:first-child {
+    justify-content: start;
+  }
+
+
 
 /* Styles for Footer Elements */
 .footer-left  {
