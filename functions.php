@@ -12,6 +12,8 @@ add_theme_support( 'html5', array(
 
     add_theme_support('menus');
 
+    add_theme_support('widgets');
+
 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 825, 510, true );
@@ -34,12 +36,17 @@ register_nav_menus(
 
 
 function threesixty_carga_style(){
-    /*wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.min.css", array(), false, 'all');
-    wp_enqueue_style('bootstrap');*/
+    if(!is_admin()){
+    wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.css", array(), true, "");
+    wp_enqueue_style('bootstrap');
+    wp_enqueue_script("bootjs",get_template_directory_uri() ."/js/bootstrap.js", array(), '1', true );
 
 
-    wp_enqueue_style( 'mi_estilo', get_template_directory_uri() ."/css/main.css");
+    /*wp_enqueue_style( 'mi_estilo', get_template_directory_uri() ."/css/main.css");*/
+    
+    wp_enqueue_style( 'mi_estilo', get_template_directory_uri() ."/css/new.css");
     }
+}
 
 add_action("wp_enqueue_scripts","threesixty_carga_style");
 

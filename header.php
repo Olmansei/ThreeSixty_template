@@ -34,7 +34,7 @@
     <nav class="barraTop">
       <div class="group">
         <a href="index.html" class="itemTitle"
-          ><img src="http://localhost/wp-content/themes/360-partygirl/media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"
+          ><img src="http://localhost/wp-content/themes/ThreeSixty_template/media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"
         /></a>
       </div>
       <div class="group">

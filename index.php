@@ -6,9 +6,9 @@
 
     <main>
       <! –– .・。.・゜✭・ Bold statement ・✫・゜・。. ––>
-      <div class="boldStatement">
+      /*<div class="boldStatement">
         <div class="contenedor-imagen">
-          <img src="http://localhost/wp-content/themes/360-partygirl/media/header.png" alt="alt text" class="imagen_Header" />
+         <img src="http://localhost/wp-content/themes/ThreeSixty_template/media/header.png" alt="alt text" class="imagen_Header" /> 
         </div>
         <div class="textoSobreImg">
           <h3>STYLE IS</h3>
@@ -26,32 +26,68 @@
         </script>
       </div>
       <! –– .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. ––>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<!--  .・。.・゜✭・ Trio de texto + img ・✫・゜・。. -->
-   
-<div class="imagenes-con-texto">
-    <div class="imagen-texto derecha"> 
-        <img src="http://localhost/wp-content/themes/360-partygirl/media/img3.png" alt="Descripción de la imagen 1" class="imagen">
-        <h1 class="article-name2">DISCOVER</p>
-        <p class="article-name4">NEW TRENDS</p> <!-- Segunda linea -->
-        <p class="article-name6">EXPLORE</p> <!-- Tercera linea -->
-        
-        <!-- <hr class="estilolinea">-->
-        
-    </div>
-    <div class="imagen-texto izquierda">
-        <img src="http://localhost/wp-content/themes/360-partygirl/media/img4.png" alt="Descripción de la imagen 2" class="imagen">
-        <h2 class="article-name3">FIND</p>
-        <p class="article-name5">YOUR STYLE</p> <!-- Segunda linea -->
-        <p class="article-name7">COLLECTIONS</p> <!-- Tercera linea -->
-    </div>
-    <div class="imagen-texto derecha">
-        <img src="http://localhost/wp-content/themes/360-partygirl/media/img5.png" alt="Descripción de la imagen 3" class="imagen">
-        <h1 class="article-name2">BUILD</p>
-        <p class="article-name4">YOUR DREAM FIT</p> <!-- Segunda linea -->
-        <p class="article-name6">OUTFIT BUILDER</p> <!-- Tercera linea -->
-    </div>
-</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline ml-auto my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!--  .・。.・゜✭・ post list ・✫・゜・。. -->
+<?php
+if ( have_posts() ) 
+  { while ( have_posts() ){
+    the_post();
+    ?>
+      <h5><?php the_title() ?></h5>
+      <p><?php the_excerpt() ?></p>
+      <hr>
+
+<?php
+
+
+
+  }
+
+
+
+
+
+}
+
+
+
+
+?>
         
 <!--  .・。.・゜✭・ FIN de Trio de texto + img ・✫・゜・。. -->
 
