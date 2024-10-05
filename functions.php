@@ -18,8 +18,10 @@ add_theme_support( 'html5', array(
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 825, 510, true );
 
+    add_image_size("preview-images",300,180, true ); //imagenes de los post en la pagina principal
 
-    $GLOBALS['content_width']=1130;
+
+    /*$GLOBALS['content_width']=1130;*/
 
 
 }
@@ -37,7 +39,7 @@ register_nav_menus(
 
 function threesixty_carga_style(){
     if(!is_admin()){
-    wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.css", array(), true, "");
+    wp_register_style("bootstrap", get_template_directory_uri() ."/css/bootstrap.css", array(), true, "all");
     wp_enqueue_style('bootstrap');
     wp_enqueue_script("bootjs",get_template_directory_uri() ."/js/bootstrap.js", array(), '1', true );
 
